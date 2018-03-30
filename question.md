@@ -1,7 +1,10 @@
-ÎÊÌâÃèÊö£ºn¸öÈËÎ§³ÉÒ»¸öÈ¦£¬Ë³ÐòÅÅºÅ£¬´ÓµÚÒ»¸öÈË¿ªÊ¼±¨Êý£¬ÊäÈëÕûÊým£¬·²ÊÇ±¨µ½mµÄÈË¶¼Ó¦¸ÃÍË³öÈ¦×Ó£¬ÎÊ×îºóÁôÏÂµÄÊÇÔ­À´µÚ¼¸ºÅµÄÄÇÎ»£¿
+é—®é¢˜æè¿°ï¼šnä¸ªäººå›´æˆä¸€ä¸ªåœˆï¼Œé¡ºåºæŽ’å·ï¼Œä»Žç¬¬ä¸€ä¸ªäººå¼€å§‹æŠ¥æ•°ï¼Œè¾“å…¥æ•´æ•°mï¼Œå‡¡æ˜¯æŠ¥åˆ°mçš„äººéƒ½åº”è¯¥é€€å‡ºåœˆå­ï¼Œé—®æœ€åŽç•™ä¸‹çš„æ˜¯åŽŸæ¥ç¬¬å‡ å·çš„é‚£ä½ï¼Ÿ
 
 
-ÒÔÏÂÊÇÓÃcÓïÑÔÀ´Ð´£¬½ö½öÓÃÑ­»·ºÍÊý×éÀ´½â¾öÕâ¸öÎÊÌâ£º
+ä»¥ä¸‹æ˜¯ç”¨cè¯­è¨€æ¥å†™ï¼Œä»…ä»…ç”¨å¾ªçŽ¯å’Œæ•°ç»„æ¥è§£å†³è¿™ä¸ªé—®é¢˜ï¼š
+
+
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,33 +21,33 @@ int main()
 
     }
 
-    i=0; //iÎªÃ¿´ÎÑ­»·Ê±µÄ¼ÆÊý±äÁ¿
-    k=0;//kÎª°´1,2,3±¨ÊýÊ±µÄ¼ÆÊ±±äÁ¿¡£
-    m=0;//mÎªÍË³öÈËÊý¡£
-    while(m<n-1)  //Ä£ÄâÓÎÏ·¹ý³Ì£¬ÕâÀïÓÃÍË³öÈËÊýÀ´¿ØÖÆÑ­»·½áÊøÌõ¼þ¡£
+    i=0; //iä¸ºæ¯æ¬¡å¾ªçŽ¯æ—¶çš„è®¡æ•°å˜é‡
+    k=0;//kä¸ºæŒ‰1,2,3æŠ¥æ•°æ—¶çš„è®¡æ—¶å˜é‡ã€‚
+    m=0;//mä¸ºé€€å‡ºäººæ•°ã€‚
+    while(m<n-1)  //æ¨¡æ‹Ÿæ¸¸æˆè¿‡ç¨‹ï¼Œè¿™é‡Œç”¨é€€å‡ºäººæ•°æ¥æŽ§åˆ¶å¾ªçŽ¯ç»“æŸæ¡ä»¶ã€‚
     {
         if(*(p+i)!=0)
             k++;
         if(k==key)
         {
-            *(p+i)=0;  //±íÊ¾¸ÃÐòºÅµÄº¢×ÓÍË³öÓÎÏ·¡£
+            *(p+i)=0;  //è¡¨ç¤ºè¯¥åºå·çš„å­©å­é€€å‡ºæ¸¸æˆã€‚
             k=0;
             m++;
         }
 
         i++;
 
-        if(i==n)  i=0; //ÓÉÓÚÊÇÒ»¸öÈ¦×Ó£¬ËùÒÔÒªÓÃÕâÖÖ·½Ê½À´·µ»Ø
+        if(i==n)  i=0; //ç”±äºŽæ˜¯ä¸€ä¸ªåœˆå­ï¼Œæ‰€ä»¥è¦ç”¨è¿™ç§æ–¹å¼æ¥è¿”å›ž
     }
 
-    while(*p==0)  //ÕâÀïÐèÒª×¢ÒâÓÉÓÚÇ°ÃæÓÃÖ¸Õë±éÀúÊý×éµÄ·½Ê½Ô­Òò£¬pÒ»Ö±Ö¸ÏòÊý×éµÄµÚÒ»¸öÔªËØ
-        p++;  //Õâ¸ö×ö·¨ÊÇÖ±½Ó¸Ä±äÁËÖ¸ÕëµÄÖ¸Ïò£¬¶øÇ°ÃæµÄ×ö·¨²¢Ã»ÓÐ¸Ä±ä¡£
+    while(*p==0)  //è¿™é‡Œéœ€è¦æ³¨æ„ç”±äºŽå‰é¢ç”¨æŒ‡é’ˆéåŽ†æ•°ç»„çš„æ–¹å¼åŽŸå› ï¼Œpä¸€ç›´æŒ‡å‘æ•°ç»„çš„ç¬¬ä¸€ä¸ªå…ƒç´ 
+        p++;  //è¿™ä¸ªåšæ³•æ˜¯ç›´æŽ¥æ”¹å˜äº†æŒ‡é’ˆçš„æŒ‡å‘ï¼Œè€Œå‰é¢çš„åšæ³•å¹¶æ²¡æœ‰æ”¹å˜ã€‚
 
     printf("the last one is NO.%d\n\n",*p);
     return 0;
 }
 
-ÒÔÏÂÊÇc++ÓïÑÔ£¬²¢ÇÒÕâÀïÓÃµ½ÁËÁ´±í£¬¸ü¼ÓÈÝÒ×Àí½â£º
+ä»¥ä¸‹æ˜¯c++è¯­è¨€ï¼Œå¹¶ä¸”è¿™é‡Œç”¨åˆ°äº†é“¾è¡¨ï¼Œæ›´åŠ å®¹æ˜“ç†è§£ï¼š
 #include <iostream>
 using namespace std;
 
@@ -54,7 +57,7 @@ struct linklist
     linklist *next;
 };
 
-linklist *present,*head;   //ÕâÀïÍ¨¹ýÈ«¾Ö±äÁ¿À´½¨Á¢Á½¸ö²»Í¬º¯ÊýÖ®¼äµÄ½»Á÷¡£¡£¡£
+linklist *present,*head;   //è¿™é‡Œé€šè¿‡å…¨å±€å˜é‡æ¥å»ºç«‹ä¸¤ä¸ªä¸åŒå‡½æ•°ä¹‹é—´çš„äº¤æµã€‚ã€‚ã€‚
 
 void creat(int n);
 void gamestart(int n,int m);
@@ -64,7 +67,7 @@ int main()
     cin>>n>>m;
     creat(n);
     gamestart(n,m);
-    cout<<"µÚ"<<present->idata<<"¸öº¢×Ó½«»ñµÃÊ¤Àû£¡"<<endl;
+    cout<<"ç¬¬"<<present->idata<<"ä¸ªå­©å­å°†èŽ·å¾—èƒœåˆ©ï¼"<<endl;
     return 0;
 }
 
@@ -111,17 +114,17 @@ void creat(int n)
 void gamestart(int n,int m)
 {
     linklist *pguard;
-    while(n!=1)//×Ô¼ºÏëµ½ÁË½áµã¸öÊý£¬È´Ã»ÓÐÏëµ½ÔõÃ´Í¨¹ý½áµã¸öÊý¿ØÖÆÑ­»·
+    while(n!=1)//è‡ªå·±æƒ³åˆ°äº†ç»“ç‚¹ä¸ªæ•°ï¼Œå´æ²¡æœ‰æƒ³åˆ°æ€Žä¹ˆé€šè¿‡ç»“ç‚¹ä¸ªæ•°æŽ§åˆ¶å¾ªçŽ¯
     {
         int j;
-        for(j=1;j<m;j++)     //ÕâÀïµÄÊµÏÖÊÇÒ»¸ö¹Ø¼ü¡£¡£¡£Í¨¹ýÒ»¸öÖ¸Õë²»¶ÏµÄÔÚÁ´±íÖ®¼ä±ä»¯À´Ä£ÄâÓÎÏ·¹ý³Ì¡£
+        for(j=1;j<m;j++)     //è¿™é‡Œçš„å®žçŽ°æ˜¯ä¸€ä¸ªå…³é”®ã€‚ã€‚ã€‚é€šè¿‡ä¸€ä¸ªæŒ‡é’ˆä¸æ–­çš„åœ¨é“¾è¡¨ä¹‹é—´å˜åŒ–æ¥æ¨¡æ‹Ÿæ¸¸æˆè¿‡ç¨‹ã€‚
         {
             pguard=present;
             present=present->next;
         }
         pguard->next=present->next;
         delete present;
-        present=pguard->next;   //´ÓÉ¾³ý½áµãµÄÏÂÒ»¸ö½Úµã½Ó×Å¿ªÊ¼Ñ­»·¡£
+        present=pguard->next;     //ä»Žåˆ é™¤ç»“ç‚¹çš„ä¸‹ä¸€ä¸ªèŠ‚ç‚¹æŽ¥ç€å¼€å§‹å¾ªçŽ¯ã€‚
         n--;
     }
 }
